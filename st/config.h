@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrains Mono Bold:pixelsize=14:antialias=true:autohint=true";
+static char *font = "MesloLGS NF:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = { "JetBrains Mono Medium:pixelsize=11:antialias=true:autohint=true" };
 static int borderpx = 2;
 
@@ -108,32 +108,32 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.6;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#148aff",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+	"#2d2d2d", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#ed0b0b",
+	"#40a62f",
+	"#f2e639",
+	"#268bd2",
+	"#b30ad0",
+	"#32d0fc",
+	"#8f81a3",
+	"#4b4a4d",
+	"#b55454",
+	"#78a670",
+	"#faf380",
+	"#68a7d4",
+	"#c583d0",
+	"#8adaf1",
+	"#e0e3e7",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
+	"#1d1f21", /* 258 -> bg */
+	"#d8dee9", /* 259 -> fg */
 };
 
 
@@ -512,29 +512,6 @@ static Key key[] = {
 	{ XK_F12, /* F36 */ ControlMask,    "\033[24;5~",    0,    0},
 	{ XK_F12, /* F48 */ Mod4Mask,       "\033[24;6~",    0,    0},
 	{ XK_F12, /* F60 */ Mod1Mask,       "\033[24;3~",    0,    0},
-	{ XK_F13,           XK_NO_MOD,      "\033[1;2P",     0,    0},
-	{ XK_F14,           XK_NO_MOD,      "\033[1;2Q",     0,    0},
-	{ XK_F15,           XK_NO_MOD,      "\033[1;2R",     0,    0},
-	{ XK_F16,           XK_NO_MOD,      "\033[1;2S",     0,    0},
-	{ XK_F17,           XK_NO_MOD,      "\033[15;2~",    0,    0},
-	{ XK_F18,           XK_NO_MOD,      "\033[17;2~",    0,    0},
-	{ XK_F19,           XK_NO_MOD,      "\033[18;2~",    0,    0},
-	{ XK_F20,           XK_NO_MOD,      "\033[19;2~",    0,    0},
-	{ XK_F21,           XK_NO_MOD,      "\033[20;2~",    0,    0},
-	{ XK_F22,           XK_NO_MOD,      "\033[21;2~",    0,    0},
-	{ XK_F23,           XK_NO_MOD,      "\033[23;2~",    0,    0},
-	{ XK_F24,           XK_NO_MOD,      "\033[24;2~",    0,    0},
-	{ XK_F25,           XK_NO_MOD,      "\033[1;5P",     0,    0},
-	{ XK_F26,           XK_NO_MOD,      "\033[1;5Q",     0,    0},
-	{ XK_F27,           XK_NO_MOD,      "\033[1;5R",     0,    0},
-	{ XK_F28,           XK_NO_MOD,      "\033[1;5S",     0,    0},
-	{ XK_F29,           XK_NO_MOD,      "\033[15;5~",    0,    0},
-	{ XK_F30,           XK_NO_MOD,      "\033[17;5~",    0,    0},
-	{ XK_F31,           XK_NO_MOD,      "\033[18;5~",    0,    0},
-	{ XK_F32,           XK_NO_MOD,      "\033[19;5~",    0,    0},
-	{ XK_F33,           XK_NO_MOD,      "\033[20;5~",    0,    0},
-	{ XK_F34,           XK_NO_MOD,      "\033[21;5~",    0,    0},
-	{ XK_F35,           XK_NO_MOD,      "\033[23;5~",    0,    0},
 };
 
 /*
