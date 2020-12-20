@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "MesloLGS NF:pixelsize=14:antialias=true:autohint=true";
-static char *font2[] = { "JetBrains Mono Medium:pixelsize=11:antialias=true:autohint=true" };
+static char *font2[] = { "Source Han Sans:pixelsize=11:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
