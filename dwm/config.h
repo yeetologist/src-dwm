@@ -41,7 +41,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5" };
+static const char *tags[] = { "1", "2", "3", "4" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -135,7 +135,6 @@ static Key keys[] = {
 	TAGKEYS(			XK_2,		1)
 	TAGKEYS(			XK_3,		2)
 	TAGKEYS(			XK_4,		3)
-	TAGKEYS(			XK_5,		4)
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
 	{ MODKEY,			XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
