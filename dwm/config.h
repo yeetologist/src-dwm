@@ -136,7 +136,6 @@ static Key keys[] = {
 	TAGKEYS(			XK_3,		2)
 	TAGKEYS(			XK_4,		3)
 	{ MODKEY,			XK_5,		spawn,		SHCMD(TERMINAL " -e top") },
-	{ MODKEY,			XK_6,		spawn,		SHCMD(TERMINAL " -e ncdu") },
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } }, { MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } }, { MODKEY,			XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
@@ -150,9 +149,9 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_w,		spawn,		SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e sudo nmtui") },
-	{ MODKEY,			XK_e,		spawn,		SHCMD("pcmanfm") },
+	{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e lf") },
 	/* { MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD() }, */
-	{ MODKEY,			XK_r,		spawn,		SHCMD(TERMINAL " -e lf") },
+	{ MODKEY,			XK_r,		spawn,		SHCMD("pcmanfm") },
 	/* { MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD() }, */
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[5]} }, /* tile */
 	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
@@ -261,8 +260,8 @@ static Key keys[] = {
 	{ 0, XF86XK_TouchpadToggle,	spawn,		SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOff,	spawn,		SHCMD("synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOn,		spawn,		SHCMD("synclient TouchpadOff=0") },
-	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("xbacklight +1") },
-	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -1") },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("xbacklight -inc 1") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -dec 1") },
 };
 
 /* button definitions */
