@@ -128,8 +128,8 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
-	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,	SHCMD("") }, */
-	{ MODKEY,			XK_grave,	spawn,	SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
+	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,	SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") }, */
+	{ MODKEY,		XK_grave,	togglescratch,	{.ui = 0} },
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(			XK_1,		0)
 	TAGKEYS(			XK_2,		1)
@@ -141,7 +141,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_BackSpace,	spawn,		SHCMD("sysact") },
-	/*{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("") },*/
+	/* { MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("") }, */
 
 	{ MODKEY,			XK_Tab,		view,		{0} },
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */
@@ -190,7 +190,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
-	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
+	/* { MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} }, */
 
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
